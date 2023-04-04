@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+body{
+    min-height: 85vh;
+    background: linear-gradient(#000428, #004e92);
+}
+.mainDiv{
+    width: 450px;
+    padding: 10px 40px;
+    margin: 100px auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+.mainDiv span{
+    color: #fff;
+    font-size: 5em;
+    font-weight: 600;
+    letter-spacing: 3px;
+    background: -webkit-linear-gradient(#fff, #eee);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.mainDiv p{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    background: -webkit-linear-gradient(#fff, #eee);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.mainDiv::before{
+    content: '';
+    position: absolute;
+    background: linear-gradient(45deg, #7b4397, #185a9d, #43cea2);
+    background-size: 200% 200%;
+    top: -5px;
+    left: -5px;
+    bottom: -5px;
+    right: -5px;
+    z-index: -1;
+    filter: blur(30px);
+    animation: glowing 5s ease infinite;
+}
+@keyframes glowing{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+@media only screen and (max-width:768px){
+    body{
+        min-height: 100vh;
+    }
+}
